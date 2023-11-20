@@ -10,9 +10,10 @@ interface RequestInterface
 {
     /**
      * @param string $base_uri
+     * @param bool $verify
      * @return RequestInterface
      */
-    public function make(string $base_uri): RequestInterface;
+    public function make(string $base_uri, bool $verify = true): RequestInterface;
 
     /**
      * @param string $uri
