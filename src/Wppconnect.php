@@ -44,9 +44,9 @@ class Wppconnect implements RequestInterface
      * @param string $base_uri
      * @return RequestInterface
      */
-    public function make(string $base_uri): RequestInterface
+    public function make(string $base_uri, bool $verify = true): RequestInterface
     {
-        $this->client = new GuzzleClient(['base_uri' => $base_uri]);
+        $this->client = new GuzzleClient(['base_uri' => $base_uri, 'verify' => $verify]);
 
         return $this;
     }
